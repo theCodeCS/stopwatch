@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import clear from "./clear";
 
-export default function App() {
+function App() {
   const [time, setTime] = useState(0);
   const [timeOn, setTimeOn] = useState(false);
   const [items, setItems] = useState([]);
+
+  function clear() {
+    return (document.getElementById("clear").innerHTML = "");
+  }
 
   function addItem() {
     let node = document.getElementById("test");
@@ -67,3 +70,6 @@ export default function App() {
     </div>
   );
 }
+
+
+export default App;
